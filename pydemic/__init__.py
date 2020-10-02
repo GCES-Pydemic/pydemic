@@ -4,7 +4,7 @@ Pydemic
 Epidemiological calculator tuned specifically for COVID-19.
 """
 # flake8: noqa
-__version__ = "0.1.10"
+__version__ = "0.1.11"
 __author__ = "Fábio Mendes"
 
 # noinspection PyUnresolvedReferences
@@ -21,3 +21,9 @@ from .diseases import disease
 from .params import Params, param, get_param, select_param
 from .model_group import ModelGroup
 from .logging import log
+
+
+# Fix old sidekick versions
+import sidekick as _sidekick
+
+_sidekick.partition_at = _sidekick.partition
